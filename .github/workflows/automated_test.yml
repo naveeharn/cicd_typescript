@@ -1,0 +1,24 @@
+name: continuous integration
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  initializing:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 20.x]
+
+    steps: 
+      - uses: actions/checkout@v3
+      - name: Use Node.js version ${{ matrix.node-version }}
+        uses: 
+          actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Initializing download dependencies from package.json
+        run: npm ci
+      - name: Validating Integration Test
+        run: npm test:integration
