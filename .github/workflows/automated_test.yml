@@ -1,9 +1,9 @@
 name: continuous integration
 
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   initializing:
     runs-on: ubuntu-latest
