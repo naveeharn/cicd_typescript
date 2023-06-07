@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Initializing download dependencies from package.json
-        run: npm i
+        run: npm install
       - name: Validating Integration Test
         run: npm run test:integration
