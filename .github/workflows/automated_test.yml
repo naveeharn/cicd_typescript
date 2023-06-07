@@ -22,4 +22,4 @@ jobs:
       - name: Initializing download dependencies from package.json
         run: npm i
       - name: Validating Integration Test
-        run: npm test:integration
+        run: npm run test:integration
