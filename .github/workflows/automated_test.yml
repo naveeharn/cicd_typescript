@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 jobs:
   initializing:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
