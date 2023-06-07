@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:integration": "jest --runInBand tests"
+    "test:integration": "jest tests"
   },
   "keywords": [],
   "author": "",
